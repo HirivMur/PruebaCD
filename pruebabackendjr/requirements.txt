@@ -3,3 +3,5 @@ djangorestframework
 django-cors-headers
 pandas
 xlrd
+dj_static
+gunicorn==19.6.0
