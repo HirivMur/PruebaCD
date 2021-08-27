@@ -17,7 +17,6 @@ class task:
                 continue
             else:
                 try:
-                    print(sheet.name)
                     if Estado.objects.filter(d_estado=sheet.name).exists() ==  False:
                         e= Estado(d_estado=sheet.name)
                         e.save()

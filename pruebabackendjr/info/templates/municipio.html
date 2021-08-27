@@ -1,0 +1,39 @@
+<!doctype html>
+
+    <head>
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" href="">
+
+        <title>Municipios</title>
+    </head>
+
+    <body bgcolor="">
+
+        <font size="6" color="#df7644" face="Tahoma">
+
+        Municipios
+
+        </font><br><br>
+        {% block content %}
+        <form action="" method="get">
+            <label id="nombre"></label>
+            <input id="municipio_nombre" type="text" name="nombre" value= "">
+            <input type="submit" value="Buscar">
+        </form>        
+            <div style="margin-left:20px;margin-top:20px">
+                <h4>Municipios</h4>
+
+                {% for municipio in municipios.all %}
+                    <p>Nombre: {{municipio.D_mnpio}}</p>
+                    
+                    <p>Estado: {{estados.d_estado}}</p>
+                    
+                {% endfor %}
+            </div>
+        {% endblock %}
+
+
+    </body>
+</html>

@@ -23,5 +23,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('token/', obtain_auth_token, name='api_token_auth'),
     url(r'^authentication/',include(('authentication.urls','users'),namespace='user')),
-    url(r'^info/',include(('info.urls','info'),namespace='info')),
+    url(r'^',include(('info.urls','info'),namespace='info')),
 ]

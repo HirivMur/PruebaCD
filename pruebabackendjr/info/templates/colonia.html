@@ -1,0 +1,43 @@
+<!doctype html>
+
+    <head>
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" href="">
+
+        <title>Colonias</title>
+    </head>
+
+    <body bgcolor="">
+
+        <font size="6" color="#df7644" face="Tahoma">
+
+        Colonias
+
+        </font><br><br>
+        {% block content %}
+        <form action="" method="get">
+            <label id="nombre"></label>
+            <input id="colonia_nombre" type="text" name="nombre" value= "">
+            <input type="submit" value="Buscar">
+        </form>        
+            <div style="margin-left:20px;margin-top:20px">
+                <h4>Colonias</h4>
+
+                {% for c in colonia.all %}
+                    <p>Nombre: {{c.d_asenta}}</p>
+                    {% for m in c.municipio_set.all %}
+                        <p>Municipio: {{m.D_mnpio}}</p>
+                    
+                    {% endfor %}
+                       
+                    <p>CP: {{c.d_CP}}</p>
+                    
+                {% endfor %}
+            </div>
+        {% endblock %}
+
+
+    </body>
+</html>

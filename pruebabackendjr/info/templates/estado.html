@@ -1,0 +1,36 @@
+<!doctype html>
+
+    <head>
+
+        <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+
+        <link rel="stylesheet" href="">
+
+        <title>Estados</title>
+    </head>
+
+    <body bgcolor="">
+
+        <font size="6" color="#df7644" face="Tahoma">
+
+        Estados
+
+        </font><br><br>
+        {% block content %}
+        <form action="" method="get">
+            <label id="nombre"></label>
+            <input id="estado_nombre" type="text" name="nombre" value= "">
+            <input type="submit" value="Buscar">
+        </form>        
+            <div style="margin-left:20px;margin-top:20px">
+                <h4>Estados</h4>
+
+                {% for estados in estados.all %}
+                    <p>Nombre: {{estados.d_estado}}</p>
+                {% endfor %}
+            </div>
+        {% endblock %}
+
+
+    </body>
+</html>
